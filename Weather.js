@@ -11,7 +11,14 @@ export default function Weather({ temp }) {
 }
 
 Weather.propTypes = {
-  temp: PropTypes.number.isRequired
+  temp: PropTypes.number.isRequired,
+  condition: PropTypes.oneOf([
+    "Dust",
+    "Haze",
+    "Mist",
+    "Clouds"
+    // TODO: 더 추가
+  ]).isRequired
 };
 
 const styles = StyleSheet.create({
